@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="design.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
     <title>PharmArshie Landing Page</title>
 </head>
 <body>
@@ -22,7 +23,7 @@
         <div class="nav-links">
             <a href="#">Home</a>
             <a href="#overview">Overview</a>
-            <a href="about-us">About Us</a>
+            <a href="#about-us">About Us</a>
             <a href="#contacts">Contacts</a>
         </div>
 
@@ -41,10 +42,20 @@
             </div>
             <div class="buttons">
                 <a href="https://geroleoerickson.github.io/PharmArshie/" target="_blank"><span class="material-symbols-rounded">link</span>Visit Link</a>
-                <button href="#"><span class="material-symbols-rounded">download</span>Download App</button>
+                <button onclick="ShowQr()"><span class="material-symbols-rounded">download</span>Download App</button>
             </div>
-            <img id="qr" src="images/qrcode.png" alt="" width="300px">
         </div>
+
+        <div class="scan" id="scanPopup" >
+            <span class="material-symbols-rounded" onclick="HideQr()">close</span>
+            <div class="scan-qr">
+                <img src="images/qrcode.png" alt="" width="300px">
+                <p>or click the link below</p>
+                <a href="https://drive.google.com/file/d/19aDTZIUl6nuCeYTcFjZ_6dz2oTuuHhML/view?usp=sharing" target="_blank"><span class="material-symbols-rounded">link</span>PharmArshie.apk</a>
+            </div>
+        </div>
+
+
         <img class="phone" src="images/phone.png" alt="" width="700px">
 
         <div class="custom-shape-divider-bottom-1717482465">
@@ -155,5 +166,15 @@ Address: 123 Arshie Lane, Boacville, FV 12345</pre>
         </div>
     </footer>
 
+
+    <script>
+        var navLinks = document.getElementById("scanPop-up")
+        function ShowQr(){
+            scanPopup.style.right = "2rem";
+        }
+        function HideQr(){
+            scanPopup.style.right = "-500px";
+        }
+    </script>
 </body>
 </html>
