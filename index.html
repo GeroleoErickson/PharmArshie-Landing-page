@@ -176,6 +176,7 @@ Address: 123 Arshie Lane, Boacville, FV 12345</pre>
 
 
     <script>
+        //scan pop up animation
         var navLinks = document.getElementById("scanPop-up")
         function ShowQr(){
             scanPopup.style.right = "2rem";
@@ -183,6 +184,25 @@ Address: 123 Arshie Lane, Boacville, FV 12345</pre>
         function HideQr(){
             scanPopup.style.right = "-500px";
         }
+        
+        //scroll animation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                
+                const scrollOffset = (window.innerHeight - targetSection.offsetHeight) / 2;
+                
+
+                window.scrollTo({
+                    top: targetSection.offsetTop - scrollOffset,
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>

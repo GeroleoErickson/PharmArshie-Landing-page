@@ -247,10 +247,11 @@ nav .nav-links a{
 
 .about-app{
     width: 100%;
-    height: fit-content;
+    height: 100vh;
     padding: 4rem 8rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
 }
@@ -303,11 +304,17 @@ nav .nav-links a{
 .mission{
     position: relative;
     width: 100%;
-    height: fit-content;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 8rem;
+    background-color: var(--color-light);
+}
+.mission img{
+    position: absolute;
+    bottom: 0;
+    right: 8rem;
 }
 .mission .mission-vision{
     display: flex;
