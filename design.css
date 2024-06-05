@@ -157,20 +157,24 @@ nav .nav-links a{
 }
 
 .introduction .phone{
+    width: 750px;
     position: absolute;
-    top: 9rem;
+    top: 50%;
+    transform: translateY(-45%);
     right: 8rem;
     z-index: 98;
 }
 .introduction .introduction-text{
     position: relative;
-    top: 10rem;
+    top: 40%;
+    transform: translateY(-40%);
     width: 50rem;
     height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 4rem;
     align-items: start;
+    z-index: 99;
 }
 
 .introduction .introduction-text .text{
